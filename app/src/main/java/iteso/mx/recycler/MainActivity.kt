@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.parse.*
 import iteso.mx.recycler.adapters.AdapterName
+import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
 
 
@@ -92,6 +93,7 @@ toast(textonuevo.text.toString())
                        usuario.put("name",textonuevo.text.toString())
                         usuario.saveInBackground()
                        //usuario.deleteInBackground()
+                        startActivity<MainActivity>()
                     }
                     else{
                         toast("errror222")
